@@ -12,9 +12,7 @@ export default {
         "Very-Light-Gray": "hsl(0, 0%, 98%)",
       },
       backgroundImage: {
-        aiioko: "url('./src/assets/ai.jpg')",
-        "simplify-mobile": "url('./src/assets/bg-simplify-section-mobile.svg')",
-        pattern: "url('./src/assets/bg-tablet-pattern.svg')",
+        aiioko: "url('./ai.jpg')",
       },
     },
   },
