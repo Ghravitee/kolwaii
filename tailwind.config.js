@@ -12,7 +12,7 @@ export default {
         "Very-Light-Gray": "hsl(0, 0%, 98%)",
       },
       backgroundImage: {
-        aiioko: "url('./ai.jpg')",
+        aiioko: "url('/ai.jpg')",
       },
     },
   },
