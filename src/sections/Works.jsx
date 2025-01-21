@@ -4,7 +4,6 @@ import {
   slideInFromLeft,
   slideInFromRight,
   slideInFromTop,
-  zoomIn,
 } from "../utils/motion.ts"; // Assuming you export your variants from a file
 
 const Works = () => {
@@ -25,12 +24,7 @@ const Works = () => {
             Start Your Journey with Kolwaii in{" "}
             <span className="font-bold">3 Simple Steps</span>
           </p>
-          <motion.img
-            src={aiiko}
-            alt=""
-            className="w-[80%] mx-auto lg:m-0"
-            variants={zoomIn(0.3, 0.5)}
-          />
+          <motion.img src={aiiko} alt="" className="w-[80%] mx-auto lg:m-0" />
         </motion.div>
 
         {/* Right section */}
