@@ -37,7 +37,7 @@ const buttonHoverVariant = {
 
 const Hero = () => {
   return (
-    <section className="py-6 lg:py-8 px-4 bg-aiioko bg-no-repeat bg-cover bg-center">
+    <section className="py-6 lg:py-8 px-4 ">
       <div className="max-w-[1250px] mx-auto">
         <motion.h1
           className="text-center font-bold text-[2.5rem] my-10"

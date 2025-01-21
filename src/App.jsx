@@ -11,8 +11,10 @@ import Works from "./sections/Works";
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <Hero />
+      <div className="bg-aiioko bg-no-repeat bg-cover bg-center">
+        <Navbar />
+        <Hero />
+      </div>
       <About />
       <Access />
       <Works />
