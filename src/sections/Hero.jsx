@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="py-6 lg:py-8 px-4 bg-aiioko bg-no-repeat bg-cover bg-center blur-2xl ">
+    <section className="py-6 lg:py-8 px-4 bg-aiioko bg-no-repeat bg-cover bg-center">
       <div className="max-w-[1250px] mx-auto ">
         <h1 className="text-center font-bold text-[2.5rem] my-10">
           Meet Aiiko: Your AI Girlfriend on Telegram

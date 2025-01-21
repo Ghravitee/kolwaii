@@ -28,7 +28,7 @@ const Works = () => {
           <motion.img
             src={aiiko}
             alt=""
-            className="w-[80%] mx-auto lg:m-0 blur-lg"
+            className="w-[80%] mx-auto lg:m-0"
             variants={zoomIn(0.3, 0.5)}
           />
         </motion.div>
