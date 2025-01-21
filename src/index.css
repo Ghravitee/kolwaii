@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: hsl(254, 83%, 7%);
+  /* background-color: #3e0873cf; */
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+  color: #8a40d4cf;
+}
