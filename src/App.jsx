@@ -92,7 +92,7 @@ const App = () => {
           zIndex: "100",
         }}
       >
-        {isPlaying ? "Pause Music" : "Play Music"}
+        {isPlaying ? "Mute" : "Unmute"}
       </button>
 
       {/* Sections */}

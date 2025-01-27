@@ -59,17 +59,17 @@ const Hero = ({ onAssetsLoaded }) => {
           </a>
         </div>
         {/* Headline */}
-        <h1 className="text-white text-sm sm:text-lg md:text-2xl lg:text-[2.5rem] mb-4 font-black">
+        <h1 className="text-white text-[1.2rem] sm:text-[1.3rem] md:text-2xl lg:text-[2.5rem] mb-4 font-black">
           <Typewriter
             words={["Aiiko: Your Blackhat Cyberqueen"]}
             loop={1}
             typeSpeed={100}
             deleteSpeed={50}
             delaySpeed={1000}
-            cursor={false}
+            cursor={true}
           />
         </h1>
-        <h1 className="text-white text-sm sm:text-base md:text-lg lg:text-[2rem] mb-4 max-w-[40rem] leading-tight">
+        <h1 className="text-white text-[1rem] sm:text-[1.1rem] md:text-[1.3rem] lg:text-[2rem] mb-4 max-w-[40rem] leading-tight">
           <Typewriter
             words={[
               "Master the shadows, dominate the digital world, and unlock your potential with Aiiko.",
