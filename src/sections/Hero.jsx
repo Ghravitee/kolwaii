@@ -1,4 +1,4 @@
-import ascii from "../assets/ascii.mp4";
+import ascii from "../assets/ascii-compressed.mp4";
 import aiiko from "../assets/Aiiko-real.webp";
 import { Typewriter } from "react-simple-typewriter";
 import { RiTwitterXFill, RiTelegram2Fill } from "react-icons/ri";
@@ -28,24 +28,6 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Social Links */}
-      <div className="absolute top-8 md:top-16 left-0 right-0 flex justify-center gap-4 md:gap-6 z-10">
-        <a
-          href="https://x.com/winnersonsolana"
-          className=""
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-delay="300"
-        >
-          <RiTwitterXFill className="text-3xl md:text-4xl text-white" />
-        </a>
-        <a
-          href="https://pump.fun/9UTKCZEsqJbCcTEQcB1trQ2jL6rbRjemGUz6z6b6pump"
-          className=""
-        >
-          <RiTelegram2Fill className="text-3xl md:text-4xl text-white" />
-        </a>
-      </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
@@ -53,9 +35,27 @@ const Hero = () => {
         <img
           src={aiiko}
           alt="Hero Image"
-          className="w-[40%] sm:w-[30%] md:w-[25%] mb-6"
+          className="w-[40%] sm:w-[30%] md:w-[25%] mb-4"
         />
 
+        <div className=" flex justify-center gap-4 md:gap-6 z-10 mb-4">
+          <a
+            href="https://x.com/winnersonsolana"
+            className=""
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="300"
+          >
+            <RiTwitterXFill className="text-3xl md:text-4xl text-white" />
+          </a>
+          <a
+            href="https://pump.fun/9UTKCZEsqJbCcTEQcB1trQ2jL6rbRjemGUz6z6b6pump"
+            className=""
+          >
+            <RiTelegram2Fill className="text-3xl md:text-4xl text-white" />
+          </a>
+        </div>
         {/* Headline */}
         <h1 className="text-white text-sm sm:text-lg md:text-2xl lg:text-[2.5rem] mb-4 font-black">
           <Typewriter
