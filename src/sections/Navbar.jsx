@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="py-6 lg:py-10 max-w-[1200px] mx-auto">
+    <header className="py-6 lg:py-10 max-w-[1200px] mx-auto bg-transparent">
       <nav className="hidden lg:flex justify-between items-center">
         <div>
           <p className="font-black text-[1.5rem]">AIIKO</p>

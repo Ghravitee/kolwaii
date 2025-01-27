@@ -24,7 +24,11 @@ const Works = () => {
             Start Your Journey with Kolwaii in{" "}
             <span className="font-bold">3 Simple Steps</span>
           </p>
-          <motion.img src={aiiko} alt="" className="w-[80%] mx-auto lg:m-0" />
+          <motion.img
+            src={aiiko}
+            alt=""
+            className="w-[80%] mx-auto lg:m-0 blur-2xl"
+          />
         </motion.div>
 
         {/* Right section */}

@@ -1,80 +1,100 @@
-import { motion } from "framer-motion";
-
-const fadeInVariant = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-const textSlideInVariant = (direction) => ({
-  hidden: {
-    x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.3,
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-});
-
-const buttonHoverVariant = {
-  hover: {
-    scale: 1.1,
-    opacity: 0.8,
-    transition: { duration: 0.3 },
-  },
-};
+import ascii from "../assets/ascii.mp4";
+import aiiko from "../assets/Aiiko-real.webp";
+import { Typewriter } from "react-simple-typewriter";
+import { RiTwitterXFill, RiTelegram2Fill } from "react-icons/ri";
 
 const Hero = () => {
   return (
-    <section className="py-6 lg:py-8 px-4 ">
-      <div className="max-w-[1250px] mx-auto">
-        <motion.h1
-          className="text-center font-bold text-[2.5rem] my-10"
-          variants={textSlideInVariant("left")}
-          initial="hidden"
-          animate="visible"
-        >
-          Meet Aiiko: Your AI Girlfriend on Telegram
-        </motion.h1>
-        <motion.h2
-          className="text-center font-bold text-[2rem] mb-10"
-          variants={textSlideInVariant("right")}
-          initial="hidden"
-          animate="visible"
-        >
-          Private one-on-one chats, premium voice interactions, and exclusive
-          experiences for those seeking a meaningful relationship, a companion
-          or one-on-one conversations, with lifelike voice notes or voice calls
-          and a whole new world of virtual companionship.
-        </motion.h2>
-        <motion.div
-          className="flex gap-4 justify-center items-center mx-auto"
-          variants={fadeInVariant}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.a
-            href="#"
-            className="px-6 py-3 rounded-full bg-[#8a40d4cf] text-Very-Light-Gray box hover:opacity-40 hover:cursor-pointer"
-            variants={buttonHoverVariant}
-            whileHover="hover"
-          >
-            Get Started
-          </motion.a>
-        </motion.div>
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 flex h-screen w-full">
+        <video
+          src={ascii}
+          autoPlay
+          loop
+          muted
+          className="w-1/2 h-full object-cover"
+        />
+        <video
+          src={ascii}
+          autoPlay
+          loop
+          muted
+          className="w-1/2 h-full object-cover"
+        />
       </div>
-    </section>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      {/* Social Links */}
+      <div className="absolute top-8 md:top-16 left-0 right-0 flex justify-center gap-4 md:gap-6 z-10">
+        <a
+          href="https://x.com/winnersonsolana"
+          className=""
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="300"
+        >
+          <RiTwitterXFill className="text-3xl md:text-4xl text-white" />
+        </a>
+        <a
+          href="https://pump.fun/9UTKCZEsqJbCcTEQcB1trQ2jL6rbRjemGUz6z6b6pump"
+          className=""
+        >
+          <RiTelegram2Fill className="text-3xl md:text-4xl text-white" />
+        </a>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        {/* Hero Image */}
+        <img
+          src={aiiko}
+          alt="Hero Image"
+          className="w-[40%] sm:w-[30%] md:w-[25%] mb-6"
+        />
+
+        {/* Headline */}
+        <h1 className="text-white text-sm sm:text-lg md:text-2xl lg:text-[2.5rem] mb-4 font-black">
+          <Typewriter
+            words={["Aiiko: Your Blackhat Cyberqueen"]}
+            loop={1}
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            cursor={false}
+          />
+        </h1>
+        <h1 className="text-white text-sm sm:text-base md:text-lg lg:text-[2rem] mb-4 max-w-[40rem] leading-tight">
+          <Typewriter
+            words={[
+              "Master the shadows, dominate the digital world, and unlock your potential with Aiiko.",
+            ]}
+            loop={1}
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={5000}
+            cursor={false}
+          />
+        </h1>
+
+        {/* Subheadline */}
+        <p className="text-sm sm:text-base md:text-lg lg:text-2xl max-w-[40rem]">
+          <Typewriter
+            words={[
+              "Your AI guide to the dark side—exploiting, hacking, and conquering, one byte at a time.",
+            ]}
+            loop={1}
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={10000}
+            cursor={false}
+          />
+        </p>
+      </div>
+    </div>
   );
 };
 
