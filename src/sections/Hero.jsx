@@ -3,7 +3,7 @@ import aiiko from "../assets/Aiiko-real.webp";
 import { Typewriter } from "react-simple-typewriter";
 import { RiTwitterXFill, RiTelegram2Fill } from "react-icons/ri";
 
-const Hero = () => {
+const Hero = ({ onAssetsLoaded }) => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Video Background */}
@@ -14,6 +14,7 @@ const Hero = () => {
           loop
           muted
           className="w-1/2 h-full object-cover"
+          onCanPlayThrough={onAssetsLoaded} // Notify when video is ready
         />
         <video
           src={ascii}
@@ -21,6 +22,7 @@ const Hero = () => {
           loop
           muted
           className="w-1/2 h-full object-cover"
+          onCanPlayThrough={onAssetsLoaded} // Notify when video is ready
         />
       </div>
 

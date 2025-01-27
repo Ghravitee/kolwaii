@@ -11,40 +11,38 @@ import theme from "./assets/theme.mp3";
 
 const App = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null); // Create a reference for the audio element
+  const [isLoaded, setIsLoaded] = useState(false); // State to track loading
+  const audioRef = useRef(null);
 
   useEffect(() => {
     const audioElement = audioRef.current;
 
     const handleUserInteraction = () => {
       if (audioElement) {
-        audioElement.muted = false; // Unmute the audio
+        audioElement.muted = false;
         audioElement
           .play()
-          .then(() => setIsPlaying(true)) // Start audio and update state
+          .then(() => setIsPlaying(true))
           .catch((err) => {
             console.error("Audio play error:", err);
           });
       }
 
-      // Remove event listeners after interaction
       window.removeEventListener("click", handleUserInteraction);
       window.removeEventListener("keydown", handleUserInteraction);
       window.removeEventListener("touchstart", handleUserInteraction);
     };
 
-    // Add event listeners for user interaction
     window.addEventListener("click", handleUserInteraction);
     window.addEventListener("keydown", handleUserInteraction);
     window.addEventListener("touchstart", handleUserInteraction);
 
     return () => {
-      // Clean up event listeners
       window.removeEventListener("click", handleUserInteraction);
       window.removeEventListener("keydown", handleUserInteraction);
       window.removeEventListener("touchstart", handleUserInteraction);
     };
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, []);
 
   const toggleAudio = () => {
     const audioElement = audioRef.current;
@@ -56,12 +54,25 @@ const App = () => {
           console.error("Error playing audio:", err);
         });
       }
-      setIsPlaying(!isPlaying); // Toggle play/pause state
+      setIsPlaying(!isPlaying);
     }
+  };
+
+  // Simulate all assets loading, including the video
+  const handleAssetsLoaded = () => {
+    setIsLoaded(true); // Set loading to false when assets are ready
   };
 
   return (
     <div>
+      {/* Loader */}
+      {!isLoaded && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black text-white z-[1000]">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white"></div>
+          <p className="absolute top-3/4 text-lg">Loading...</p>
+        </div>
+      )}
+
       {/* Background music */}
       <audio autoPlay loop muted ref={audioRef} id="audio">
         <source src={theme} type="audio/mpeg" />
@@ -85,7 +96,8 @@ const App = () => {
       </button>
 
       {/* Sections */}
-      <Hero />
+      <Hero onAssetsLoaded={handleAssetsLoaded} />
+      {/* Uncomment other sections when needed */}
       {/* <About />
       <Access />
       <Works />
