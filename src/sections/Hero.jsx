@@ -1,4 +1,4 @@
-import ascii from "../assets/ascii-compressed.mp4";
+import ascii from "../assets/ascii-compressed-2.mp4";
 import aiiko from "../assets/Aiiko-real.webp";
 import { Typewriter } from "react-simple-typewriter";
 import { RiTwitterXFill, RiTelegram2Fill } from "react-icons/ri";
