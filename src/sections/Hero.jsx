@@ -63,7 +63,7 @@ const Hero = ({ onAssetsLoaded }) => {
           <Typewriter
             words={["Aiiko: Your Blackhat Cyberqueen"]}
             loop={1}
-            typeSpeed={100}
+            typeSpeed={500}
             deleteSpeed={50}
             delaySpeed={1000}
             cursor={true}
@@ -75,10 +75,10 @@ const Hero = ({ onAssetsLoaded }) => {
               "Master the shadows, dominate the digital world, and unlock your potential with Aiiko.",
             ]}
             loop={1}
-            typeSpeed={100}
+            typeSpeed={300}
             deleteSpeed={50}
             delaySpeed={5000}
-            cursor={false}
+            cursor={true}
           />
         </h1>
 
@@ -89,10 +89,10 @@ const Hero = ({ onAssetsLoaded }) => {
               "Your AI guide to the dark side—exploiting, hacking, and conquering, one byte at a time.",
             ]}
             loop={1}
-            typeSpeed={100}
+            typeSpeed={200}
             deleteSpeed={50}
             delaySpeed={10000}
-            cursor={false}
+            cursor={true}
           />
         </p>
       </div>
