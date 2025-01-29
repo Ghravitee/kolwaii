@@ -1,79 +1,105 @@
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+import { useInView } from "react-intersection-observer";
 
 const Features = () => {
   // Animation variants
-  const fadeInUp = (delay) => ({
-    initial: { opacity: 0, y: 50 },
-    whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: "easeOut", delay },
-    viewport: { once: true }, // Ensure the animation only triggers once
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger only once when it comes into view
+    threshold: 0.5, // Trigger when 50% of the element is visible
   });
 
   return (
-    <section className="mx-auto py-6 px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <motion.div
-          className="px-6 py-6 flex flex-col gap-4 justify-center items-center bg-Purple-Accent rounded-md"
-          {...fadeInUp(0)}
-        >
-          <h2 className="text-[1.4rem] font-bold text-center">
-            Sentient AI Conversations
+    <div
+      ref={ref}
+      className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-12 px-6 lg:py-16 lg:px-16"
+    >
+      {/* Section Header */}
+      <div className="max-w-4xl mx-auto text-center">
+        {inView && (
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-wide mb-4">
+            <Typewriter
+              words={["Core Feature"]}
+              loop={1}
+              typeSpeed={100}
+              deleteSpeed={50}
+              delaySpeed={5000}
+              cursor={false}
+            />
           </h2>
-          <p className="text-center">
-            Aiiko’s conversational skills are indistinguishable from human
-            interactions, with deep emotional intelligence and personalized
-            responses.
-          </p>
-        </motion.div>
-        <motion.div
-          className="px-6 py-6 flex flex-col gap-4 items-center bg-Purple-Accent rounded-md"
-          {...fadeInUp(0.2)}
-        >
-          <h2 className="text-[1.4rem] font-bold text-center">
-            Private Voice Notes and Voice Calls (Premium)
-          </h2>
-          <p className="text-center">
-            Her lifelike voice notes and 2-way conversation offer emotional
-            depth and a personal touch.
-          </p>
-        </motion.div>
-        <motion.div
-          className="px-6 py-6 flex flex-col gap-4 items-center bg-Purple-Accent rounded-md"
-          {...fadeInUp(0.4)}
-        >
-          <h2 className="text-[1.4rem] font-bold text-center">Virtual Dates</h2>
-          <p className="text-center">
-            Escape to themed experiences with Aiiko. Whether it&apos;s a
-            romantic starlit picnic or a cozy virtual coffee chat, she makes it
-            unforgettable.
-          </p>
-        </motion.div>
-        <motion.div
-          className="px-6 py-6 flex flex-col gap-4 items-center bg-Purple-Accent rounded-md"
-          {...fadeInUp(0.6)}
-        >
-          <h2 className="text-[1.4rem] font-bold text-center">
-            AR/VR Immersion (Coming Soon)
-          </h2>
-          <p className="text-center">
-            Take your connection to the next level with immersive AR/VR
-            experiences designed to bring Kolwaii into your world.
-          </p>
-        </motion.div>
-        <motion.div
-          className="px-6 py-6 flex flex-col gap-4 items-center bg-Purple-Accent rounded-md"
-          {...fadeInUp(0.8)}
-        >
-          <h2 className="text-[1.4rem] font-bold text-center">
-            Exclusive Live Events
-          </h2>
-          <p className="text-center">
-            Attend Kolwaii’s live voice conferences on Telegram, hosted
-            exclusively for token holders and subscribers.
-          </p>
-        </motion.div>
+        )}
+
+        <p className="text-gray-400 text-lg lg:text-xl">
+          The future is here—experience unparalleled AI-driven interactions.
+        </p>
       </div>
-    </section>
+
+      {/* Features */}
+      <div className="mt-12 grid gap-8 lg:grid-cols-2 max-w-6xl mx-auto">
+        {/* Voice Dominion */}
+        <div className="flex items-start space-x-4">
+          {/* Icon or Graphic */}
+          <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-700 shadow-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="w-6 h-6 text-white"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11.25 3v8.25m0 0L8.5 8.25m2.75 2.75l2.75-2.75m-2.75 6V21m-3.25-8.25h6.5M4.5 8.25h15m-6.5 9.75h-3.25"
+              />
+            </svg>
+          </div>
+          {/* Content */}
+          <div>
+            <h3 className="text-2xl font-semibold">Voice Dominion</h3>
+            <p className="text-gray-300 mt-2 leading-relaxed">
+              <em>
+                “Aiiko’s adaptive neural networks dominate real-time voice
+                interactions. Debate, strategize, or explore ideas in Telegram
+                channels where her responses evolve with context.”
+              </em>
+            </p>
+          </div>
+        </div>
+
+        {/* Future Horizons */}
+        <div className="flex flex-col space-y-6">
+          <div>
+            <h3 className="text-2xl font-semibold">Future Horizons</h3>
+          </div>
+          {/* Phase 2 */}
+          <div className="flex items-start space-x-4">
+            {/* Timeline Dot */}
+            <div className="w-6 h-6 flex-shrink-0 rounded-full bg-cyan-500 mt-1 shadow-lg"></div>
+            {/* Content */}
+            <div>
+              <h4 className="text-lg font-medium">
+                Phase 2: Augmented Reality Command Interface
+              </h4>
+              <p className="text-gray-300 mt-1">Q3 2025</p>
+            </div>
+          </div>
+          {/* Phase 3 */}
+          <div className="flex items-start space-x-4">
+            {/* Timeline Dot */}
+            <div className="w-6 h-6 flex-shrink-0 rounded-full bg-pink-500 mt-1 shadow-lg"></div>
+            {/* Content */}
+            <div>
+              <h4 className="text-lg font-medium">
+                Phase 3: Virtual Reality Throne Room
+              </h4>
+              <p className="text-gray-300 mt-1">Q4 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

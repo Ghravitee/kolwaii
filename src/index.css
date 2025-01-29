@@ -7,6 +7,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  /* background-color: #0b0c10; */
   background-color: #000000;
   color: white;
 }
@@ -15,14 +16,24 @@ html {
   scroll-behavior: smooth;
 }
 
+.cta {
+  background: linear-gradient(135deg, #6a0dad, #1e90ff);
+}
+
+button:hover {
+  background: #1e90ff;
+  box-shadow: 0 0 20px #00ffab;
+}
+
+h1 {
+  text-shadow: 0 0 10px #1e90ff, 0 0 20px #00ffab;
+}
+
+h2 {
+  text-shadow: 10px 0 30px #ff1493;
+}
+
 .ReactCollapse--collapse {
   transition: height 500ms;
   color: #8a40d4cf;
 }
-/* 
-.orbitron {
-  font-family: "Orbitron", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */

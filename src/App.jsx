@@ -17,32 +17,17 @@ const App = () => {
   useEffect(() => {
     const audioElement = audioRef.current;
 
-    const handleUserInteraction = () => {
-      if (audioElement) {
-        audioElement.muted = false;
-        audioElement
-          .play()
-          .then(() => setIsPlaying(true))
-          .catch((err) => {
-            console.error("Audio play error:", err);
-          });
-      }
-
-      window.removeEventListener("click", handleUserInteraction);
-      window.removeEventListener("keydown", handleUserInteraction);
-      window.removeEventListener("touchstart", handleUserInteraction);
-    };
-
-    window.addEventListener("click", handleUserInteraction);
-    window.addEventListener("keydown", handleUserInteraction);
-    window.addEventListener("touchstart", handleUserInteraction);
-
-    return () => {
-      window.removeEventListener("click", handleUserInteraction);
-      window.removeEventListener("keydown", handleUserInteraction);
-      window.removeEventListener("touchstart", handleUserInteraction);
-    };
-  }, []);
+    // Attempt to autoplay the audio
+    if (audioElement) {
+      audioElement.muted = false; // Unmute the audio
+      audioElement
+        .play()
+        .then(() => setIsPlaying(true)) // Audio successfully played
+        .catch((err) => {
+          console.error("Audio autoplay failed:", err);
+        });
+    }
+  }, []); // Run once on component mount
 
   const toggleAudio = () => {
     const audioElement = audioRef.current;
@@ -72,13 +57,11 @@ const App = () => {
           <p className="absolute top-3/4 text-lg">Loading...</p>
         </div>
       )}
-
       {/* Background music */}
-      <audio autoPlay loop muted ref={audioRef} id="audio">
+      <audio autoPlay loop ref={audioRef} id="audio">
         <source src={theme} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-
       {/* Play/Pause Button */}
       <button
         onClick={toggleAudio}
@@ -94,17 +77,16 @@ const App = () => {
       >
         {isPlaying ? "Mute" : "Unmute"}
       </button>
-
       {/* Sections */}
       <Hero onAssetsLoaded={handleAssetsLoaded} />
       {/* Uncomment other sections when needed */}
-      {/* <About />
-      <Access />
-      <Works />
+      <About />
+      {/* <Access />
+      <Works /> */}
       <Roadmap />
-      <FAQ />
+      {/* <FAQ /> */}
       <Support />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };
