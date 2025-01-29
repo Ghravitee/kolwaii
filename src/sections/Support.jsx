@@ -24,7 +24,7 @@ const Support = () => {
               typeSpeed={100}
               deleteSpeed={50}
               delaySpeed={5000}
-              cursor={true}
+              cursor={false}
             />
           </h2>
         )}
