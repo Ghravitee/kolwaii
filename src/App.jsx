@@ -1,13 +1,15 @@
 import About from "./sections/About";
-import Access from "./sections/Access";
-import FAQ from "./sections/FAQ";
+// import Access from "./sections/Access";
+// import FAQ from "./sections/FAQ";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Roadmap from "./sections/Roadmap";
 import Support from "./sections/Support";
-import Works from "./sections/Works";
+// import Works from "./sections/Works";
 import { useEffect, useRef, useState } from "react";
 import theme from "./assets/theme.mp3";
+import Statement from "./sections/Statement";
+import PoweredBy from "./sections/PoweredBy";
 
 const App = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -79,10 +81,11 @@ const App = () => {
       </button>
       {/* Sections */}
       <Hero onAssetsLoaded={handleAssetsLoaded} />
-      {/* Uncomment other sections when needed */}
+      <PoweredBy />
       <About />
       {/* <Access />
       <Works /> */}
+      <Statement />
       <Roadmap />
       {/* <FAQ /> */}
       <Support />

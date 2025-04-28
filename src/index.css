@@ -21,8 +21,8 @@ html {
 }
 
 button:hover {
-  background: #1e90ff;
-  box-shadow: 0 0 20px #00ffab;
+  border: solid 1px ghostwhite;
+  border-radius: 0.5rem;
 }
 
 h1 {

@@ -1,4 +1,4 @@
-import { Reveal } from "../components/Reveal";
+// import { Reveal } from "../components/Reveal";
 import { Typewriter } from "react-simple-typewriter";
 import { useInView } from "react-intersection-observer";
 
