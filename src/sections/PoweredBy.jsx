@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import breadcrumbs from "../assets/breadcrumbs.svg";
 import metasleuth from "../assets/metasleuth.png";
+import nariLabs from "../assets/nari.jpg";
 
 // Example platforms
 const platforms = [
@@ -13,6 +14,11 @@ const platforms = [
     name: "Metasleuth",
     icon: metasleuth,
     link: "https://metasleuth.io",
+  },
+  {
+    name: "Nari Labs",
+    icon: nariLabs,
+    link: "https://github.com/nari-labs/dia",
   },
 ];
 

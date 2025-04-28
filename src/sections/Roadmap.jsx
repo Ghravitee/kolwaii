@@ -30,7 +30,7 @@ const Roadmap = () => {
               className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8"
             >
               {inView && (
-                <h1 className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2 boldonse-regular">
+                <h1 className="text-2xl lg:text-3xl leading-normal md:leading-relaxed mb-2 boldonse-regular">
                   <Typewriter
                     words={["Conquest Timeline"]}
                     loop={1}

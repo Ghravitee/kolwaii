@@ -16,7 +16,7 @@ const About = () => {
       id="about"
     >
       {/* Heading with Typewriter Effect */}
-      <h1 className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2 boldonse-regular">
+      <h1 className="text-2xl lg:text-3xl leading-normal md:leading-relaxed mb-2 boldonse-regular text-center lg:text-left">
         {inView && ( // Render the Typewriter effect only when in view
           <Typewriter
             words={[" The Sovereign’s Tools"]}
