@@ -15,19 +15,19 @@ const Footer = () => {
 
         <div className="flex items-center md:gap-3 gap-6">
           <a
-            href={"/"}
+            href={"https://x.com/aiikoai"}
             className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
           >
             <FaXTwitter size={20} />
           </a>
           <a
-            href={"/"}
+            href={"https://t.me/aiikoai_sol"}
             className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
           >
             <FaTelegramPlane size={20} />
           </a>
           <a
-            href={"https://discord.gg/ZrPGS4vg"}
+            href="https://discord.gg/ZrPGS4vg"
             className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
           >
             <FaDiscord size={20} />

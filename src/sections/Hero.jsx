@@ -45,7 +45,7 @@ const Hero = ({ onAssetsLoaded }) => {
       {/* Social Links */}
       <div className="relative top-4 flex justify-center gap-4 md:gap-6 z-10">
         <a
-          href="https://x.com/aiikoai?s=21"
+          href="https://x.com/aiikoai"
           className=""
           data-aos="zoom-in"
           data-aos-duration="1000"

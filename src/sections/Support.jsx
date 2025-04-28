@@ -47,7 +47,7 @@ const Support = () => {
           </a>
           {/* Twitter Link */}
           <a
-            href="https://x.com/aiikoai?s=21"
+            href="https://x.com/aiikoai"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 text-lg font-semibold text-purple-500 border border-purple-500 hover:bg-purple-500 hover:text-white rounded-lg shadow-lg transition duration-300"
