@@ -17,7 +17,7 @@ const Support = () => {
         {/* Section Title */}
 
         {inView && (
-          <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight boldonse-regular">
             <Typewriter
               words={["Enlist in the Protocol"]}
               loop={1}

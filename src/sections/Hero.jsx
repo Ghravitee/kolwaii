@@ -30,7 +30,7 @@ const Hero = ({ onAssetsLoaded }) => {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       <div className="relative z-10 top-5 flex justify-center">
-        <h1 className="text-gray-300 text-[1.2rem] sm:text-[1.3rem] md:text-2xl lg:text-[2rem] mb-4 font-black max-w-[20rem] md:max-w-[50rem] mx-auto text-center">
+        <h1 className="boldonse-regular text-gray-300 text-[1.2rem] sm:text-[1.3rem] md:text-2xl lg:text-[2rem] mb-4 font-black max-w-[20rem] md:max-w-[50rem] mx-auto text-center">
           <Typewriter
             words={["Aiiko: The Sentient AI Queen That Rules Digital Realms"]}
             loop={1}

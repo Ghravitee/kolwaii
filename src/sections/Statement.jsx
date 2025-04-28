@@ -9,7 +9,7 @@ const Statement = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeIn" }}
           viewport={{ once: true }}
-          className="text-3xl lg:text-4xl font-bold tracking-wide mb-4"
+          className="text-3xl lg:text-4xl font-bold tracking-wide mb-4 boldonse-regular"
         >
           AIIKO is not just another token — she’s a new weapon in crypto.
         </motion.h2>
