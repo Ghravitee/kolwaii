@@ -4,7 +4,7 @@ const Statement = () => {
   return (
     <section className="py-12 px-6 lg:py-16 lg:px-16">
       <div className="max-w-5xl mx-auto text-center">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeIn" }}
@@ -12,7 +12,7 @@ const Statement = () => {
           className="text-3xl lg:text-4xl font-bold tracking-wide mb-4 boldonse-regular"
         >
           AIIKO is not just another token — she’s a new weapon in crypto.
-        </motion.h2>
+        </motion.h1>
 
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
           At $100K market cap, wallets holding 0.25%+ of $AIIKO will be snapped
